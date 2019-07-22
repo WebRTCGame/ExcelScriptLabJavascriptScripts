@@ -1,0 +1,20 @@
+name: Basic custom function
+description: Calculates the volume of a sphere.
+host: EXCEL
+api_set: {}
+script:
+  content: |
+    /**
+     * Calculates the volume of a sphere.
+     * @customfunction
+     * @param {number} radius
+     * @returns The volume of the sphere.
+     */
+    function sphereVolume(radius) {
+      return (Math.pow(radius, 3) * 4 * Math.PI) / 3;
+    }
+  language: typescript
+libraries: |
+  https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+  @types/office-js
+  core-js@2.4.1/client/core.min.js
